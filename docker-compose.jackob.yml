@@ -4,10 +4,6 @@ networks:
   public_network:
     external: true
 
-#volumes:
-    #unifi-data:
-        #external: true
-
 services:
     traefik:
         image: traefik:1.6-alpine
@@ -19,7 +15,7 @@ services:
         labels:
             - traefik.enable=true
             - traefik.docker.network=public_network
-            - traefik.frontend.rule=Host:prtraefik.${DOMAIN}
+            - traefik.frontend.rule=Host:cloudtraefik.${DOMAIN}
             - traefik.port=8080
         volumes:
             - /var/run/docker.sock:/var/run/docker.sock:ro
@@ -50,5 +46,3 @@ services:
             #- ./unifi/backup:/usr/lib/unifi/data/backup
         networks:
             - public_network
-
-# vim: set filetype=yaml :
