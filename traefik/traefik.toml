@@ -29,8 +29,8 @@ dashboard = true
   # Basic auth for Traefik interface. This is admin/12345 - please change it.
   # Use htpasswd to generate yours, like this:
   #   docker run --rm -it httpd:alpine htpasswd -bnB admin 12345
-  #users = ["admin:$2y$05$pHn0lBVoG1u8c8WDaS.AY.GE/B6BY6MC6yYBXM/sNL96N7A2CcrEW"]
-  users = ["sicario:$2y$10$VVEVjU6bq56arCiiR5pDZOWiqNm9anqwpHEz25IK06h5NIbEaP9VW"]
+  users = ["admin:$2y$05$pHn0lBVoG1u8c8WDaS.AY.GE/B6BY6MC6yYBXM/sNL96N7A2CcrEW"]
+  
 
 [acme]
 email = "info@fenyszaru.hu"
